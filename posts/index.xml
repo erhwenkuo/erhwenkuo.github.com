@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 緯創IT先進技術實驗室</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on 緯創IT先進技術實驗室</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Dec 2019 14:36:40 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Hugo與Github來建立部落格</title>
+      <link>http://example.org/posts/20191224_hugo_tutorial/</link>
+      <pubDate>Tue, 24 Dec 2019 14:36:40 +0800</pubDate>
+      
+      <guid>http://example.org/posts/20191224_hugo_tutorial/</guid>
+      <description>&lt;p&gt;常常會覺得如果有一個地方可以很容易地發佈一些技術文章並且可以自己掌握文章發佈的手法, 那麼就會提高自己寫文章的動機。&lt;/p&gt;
+
+&lt;p&gt;在許多公司的技術部落格中發現有一些蠻不錯的工具可以讓我們這種工具人可以快速達到這個心願。今天要介詔的&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;就歸屬在這個類別。有興趣了解Hugo更詳細用法的朋友們, 請移駕到&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo官網&lt;/a&gt;囉。&lt;/p&gt;
+
+&lt;p&gt;以下分為兩部分介紹：建立本地部落格、部署到GitHub。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
