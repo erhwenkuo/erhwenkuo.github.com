@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Markdown 語法說明 - 緯創IT先進技術實驗室</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Markdown的語法全由標點符號所組成，目標是實現「易讀易寫」。">
+	<meta property="og:title" content="Markdown 語法說明" />
+<meta property="og:description" content="Markdown的語法全由標點符號所組成，目標是實現「易讀易寫」。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://erhwenkuo.github.io/posts/20191225_md_syntax/" />
+<meta property="article:published_time" content="2019-12-25T07:31:00+08:00" />
+<meta property="article:modified_time" content="2019-12-25T07:31:00+08:00" />
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="緯創IT先進技術實驗室" rel="home">
+				<div class="logo__title">緯創IT先進技術實驗室</div>
+				<div class="logo__tagline">二哥 (Erhwen Kuo)</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Markdown 語法說明</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-12-25T07:31:00">December 25, 2019</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/documentation/" rel="category">Documentation</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p><img src="/images/20191225_md_syntax/markdown.png" alt="Markdown" /></p>
+
+<p>Markdown 的目標是實現「易讀易寫」。</p>
+
+<p>Markdown 的語法有個主要的目的：用來作為一種網路內容的寫作用語言。也因為這個目標與目的, Markdown 成為許多開源專案的文件的格式, 除了便於可以讓大家不必擔心文件最後呈現的樣子以外，也可以達成document-as-code的版本管控、自動編譯與自動佈署的流水線設計。</p>
+
+<hr />
+
+<h2 id="標題">標題</h2>
+
+<p>讓我們先從不同的標題大小開始。 HTML定義了<code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code>6種標題大小的階級。<code>&lt;h1&gt;</code>是最高的階級，而<code>&lt;h6&gt;</code>則是最小的階級。</p>
+
+<p>只要在行首插入1到6個<code>#</code>，就能對應到標題1到6階，例如:</p>
+
+<pre><code class="language-markdown"># Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre>
+
+<h1 id="heading-1">Heading 1</h1>
+
+<h2 id="heading-2">Heading 2</h2>
+
+<h3 id="heading-3">Heading 3</h3>
+
+<h4 id="heading-4">Heading 4</h4>
+
+<h5 id="heading-5">Heading 5</h5>
+
+<h6 id="heading-6">Heading 6</h6>
+
+<hr />
+
+<h2 id="段落和換行">段落和換行</h2>
+
+<p>一個段落是由一個以上相連接的行句組成，而一個以上的空行則會切分出不同的段落（空行的定義是顯示上看起來像是空行，便會被視為空行。比方說，若某一行只包含空白和 tab，則該行也會被視為空行），一般的段落不需要用空白或斷行縮排。</p>
+
+<pre><code class="language-markdown">Paragraph1 is here.
+                              &lt;-- 空一行
+Paragraph2 is here.
+</code></pre>
+
+<p>結果展現:</p>
+
+<p>Paragraph1 is here.</p>
+
+<p>Paragraph2 is here.</p>
+
+<hr />
+
+<h2 id="強調">強調</h2>
+
+<p>Markdown 使用星號（*）和底線（_）作為標記強調字詞的符號，被 * 或 _ 包圍的字詞會被轉成用 <code>&lt;em&gt;</code> 標籤包圍，用兩個 * 或 _ 包起來的話，則會被轉成 <code>&lt;strong&gt;</code>，例如：</p>
+
+<pre><code class="language-markdown">*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+</code></pre>
+
+<p>結果展現:</p>
+
+<p><em>single asterisks</em></p>
+
+<p><em>single underscores</em></p>
+
+<p><strong>double asterisks</strong></p>
+
+<p><strong>double underscores</strong></p>
+
+<hr />
+
+<h2 id="連結">連結</h2>
+
+<p>Markdown 支援兩種形式的連結語法： <code>行內(inline)</code>和<code>參考(reference)</code>兩種形式。</p>
+
+<p>不管是哪一種，連結的文字都是用 [方括號] 來標記。</p>
+
+<p>要建立一個行內形式的連結，只要在方塊括號後面馬上接著括號並插入網址連結即可，如果你還想要加上連結的 title 文字，只要在網址後面，用雙引號把 title 文字包起來即可，例如：</p>
+
+<pre><code class="language-txt">This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre>
+
+<p>結果展現:</p>
+
+<p>This is <a href="http://example.com/" title="Title">an example</a> inline link.</p>
+
+<p><a href="http://example.net/">This link</a> has no title attribute.</p>
+
+<p>如果你是要連結到同樣主機的資源，你可以使用相對路徑：</p>
+
+<pre><code class="language-txt">See my [About](/about/) page for details.
+</code></pre>
+
+<p>結果展現:</p>
+
+<p>See my <a href="/about/">About</a> page for details.</p>
+
+<hr />
+
+<h2 id="圖-片">圖片</h2>
+
+<p>Markdown 使用一種和連結很相似的語法來標記圖片，同樣也允許兩種樣式： 行內和參考。</p>
+
+<p>行內圖片的語法看起來像是：</p>
+
+<pre><code class="language-txt">![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre>
+
+<hr />
+
+<h2 id="清單">清單</h2>
+
+<h3 id="有序清單">有序清單</h3>
+
+<p>有序清單則使用數字接著一個英文句點：</p>
+
+<pre><code class="language-markdown">1. First item
+2. Second item
+3. Third item
+</code></pre>
+
+<p>結果展現:</p>
+
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+
+<h3 id="無序清單">無序清單</h3>
+
+<p>無序清單使用星號、加號或是減號作為清單標記：</p>
+
+<pre><code class="language-markdown">* List item
+* Another item
+* And another item
+</code></pre>
+
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+
+<h3 id="巢狀清單">巢狀清單</h3>
+
+<p>巢狀清單結合了無序清單與有序清單的標記，並透過tab來作為父子上下關係的區隔子：</p>
+
+<pre><code class="language-markdown">* First item
+* Second item
+    * Second item First subitem
+    * Second item second subitem
+        * Second item Second subitem First sub-subitem
+        * Second item Second subitem Second sub-subitem
+        * Second item Second subitem Third sub-subitem
+    * Second item Third subitem
+        1. Second item Third subitem First sub-subitem
+        2. Second item Third subitem Second sub-subitem
+        3. Second item Third subitem Third sub-subitem
+* Third item
+</code></pre>
+
+<p>結果展現:</p>
+
+<ul>
+<li>First item</li>
+<li>Second item
+
+<ul>
+<li>Second item First subitem</li>
+<li>Second item second subitem
+
+<ul>
+<li>Second item Second subitem First sub-subitem</li>
+<li>Second item Second subitem Second sub-subitem</li>
+<li>Second item Second subitem Third sub-subitem</li>
+</ul></li>
+<li>Second item Third subitem
+
+<ol>
+<li>Second item Third subitem First sub-subitem</li>
+<li>Second item Third subitem Second sub-subitem</li>
+<li>Second item Third subitem Third sub-subitem</li>
+</ol></li>
+</ul></li>
+<li>Third item</li>
+</ul>
+
+<hr />
+
+<h2 id="區塊引言">區塊引言</h2>
+
+<p>Markdown使用email形式的區塊引言，如果你很熟悉如何在email信件中引言，你就知道怎麼在Markdown文件中建立一個區塊引言，那會看起來像是你強迫斷行，然後在每行的最前面加上<code>&gt;</code>：</p>
+
+<blockquote>
+<p>Quoted text.
+This line is part of the same quote.
+Also you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+
+<p>區塊引言(使用inline html)</p>
+
+<blockquote>
+  <p>My goal wasn't to make a ton of money. It was to build good computers. I only started the company when I realized I could be an engineer forever.</p>
+  <footer>— <cite>Steve Wozniak</cite></footer>
+</blockquote>
+
+<hr />
+
+<h2 id="表格">表格</h2>
+
+<p>表格並不是Markdown核心規範的一部分，但Hugo支持表格的markdown語法。</p>
+
+<pre><code class="language-markdown">| ID  | Make      | Model   | Year |
+| --- | --------- | ------- | ---- |
+| 1   | Honda     | Accord  | 2009 |
+| 2   | Toyota    | Camry   | 2012 |
+| 3   | Hyundai   | Elantra | 2010 |
+</code></pre>
+
+<p>結果展現:</p>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Make</th>
+<th>Model</th>
+<th>Year</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>Honda</td>
+<td>Accord</td>
+<td>2009</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Toyota</td>
+<td>Camry</td>
+<td>2012</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Hyundai</td>
+<td>Elantra</td>
+<td>2010</td>
+</tr>
+</tbody>
+</table>
+
+<p>透過<code>:</code>來對欄位的展示進行向左、靠右或置中的設定。</p>
+
+<pre><code class="language-markdown">| ID  | Make      | Model   | Year |
+| --- |:---------:|:------- | ----:|
+| 1   | Honda     | Accord  | 2009 |
+| 2   | Toyota    | Camry   | 2012 |
+| 3   | Hyundai   | Elantra | 2010 |
+</code></pre>
+
+<p>結果展現:</p>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th align="center">Make</th>
+<th align="left">Model</th>
+<th align="right">Year</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td align="center">Honda</td>
+<td align="left">Accord</td>
+<td align="right">2009</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td align="center">Toyota</td>
+<td align="left">Camry</td>
+<td align="right">2012</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td align="center">Hyundai</td>
+<td align="left">Elantra</td>
+<td align="right">2010</td>
+</tr>
+</tbody>
+</table>
+
+<p>你也可以使用inline的Markdown標記來強化一些表格值的變化。</p>
+
+<pre><code class="language-markdown">| Inline     | Markdown  | In                | Table      |
+| ---------- | --------- | ----------------- | ---------- |
+| *italics*  | **bold**  | ~~strikethrough~~ | `code`     |
+</code></pre>
+
+<p>結果展現:</p>
+
+<table>
+<thead>
+<tr>
+<th>Inline</th>
+<th>Markdown</th>
+<th>In</th>
+<th>Table</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>italics</em></td>
+<td><strong>bold</strong></td>
+<td><del>strikethrough</del></td>
+<td><code>code</code></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="程式碼區塊">程式碼區塊</h2>
+
+<p>如果要標記一小段行內程式碼，你可以用反引號把它包起來（`），例如：</p>
+
+<pre><code class="language-markdown">Use the `printf()` function.
+</code></pre>
+
+<p>結果展現:</p>
+
+<p>Use the <code>printf()</code> function.</p>
+
+<p>如果程式碼比較長或是有多個段落，那麼可以用(```)來把程式碼給包起來。</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Hugo使用<a href="https://github.com/alecthomas/chroma">Chroma</a>來做為它的<a href="https://gohugo.io/content-management/syntax-highlighting/">程式碼區塊高亮(highlighter)</a>模組。透過Chroma的支援, 在Hugo裡可以對以下的程式碼進行友善的展現:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Prefix</th>
+<th>Language</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">A</td>
+<td>ABAP, ABNF, ActionScript, ActionScript 3, Ada, Angular2, ANTLR, ApacheConf, APL, AppleScript, Arduino, Awk</td>
+</tr>
+
+<tr>
+<td align="center">B</td>
+<td>Ballerina, Base Makefile, Bash, Batchfile, BlitzBasic, BNF, Brainfuck</td>
+</tr>
+
+<tr>
+<td align="center">C</td>
+<td>C, C#, C++, Cap&rsquo;n Proto, Cassandra CQL, Ceylon, CFEngine3, cfstatement, ChaiScript, Cheetah, Clojure, CMake, COBOL, CoffeeScript, Common Lisp, Coq, Crystal, CSS, Cython</td>
+</tr>
+
+<tr>
+<td align="center">D</td>
+<td>D, Dart, Diff, Django/Jinja, Docker, DTD</td>
+</tr>
+
+<tr>
+<td align="center">E</td>
+<td>EBNF, Elixir, Elm, EmacsLisp, Erlang</td>
+</tr>
+
+<tr>
+<td align="center">F</td>
+<td>Factor, Fish, Forth, Fortran, FSharp</td>
+</tr>
+
+<tr>
+<td align="center">G</td>
+<td>GAS, GDScript, Genshi, Genshi HTML, Genshi Text, GLSL, Gnuplot, Go, Go HTML Template, Go Text Template, GraphQL, Groovy</td>
+</tr>
+
+<tr>
+<td align="center">H</td>
+<td>Handlebars, Haskell, Haxe, HCL, Hexdump, HTML, HTTP, Hy</td>
+</tr>
+
+<tr>
+<td align="center">I</td>
+<td>Idris, INI, Io</td>
+</tr>
+
+<tr>
+<td align="center">J</td>
+<td>J, Java, JavaScript, JSON, Julia, Jungle</td>
+</tr>
+
+<tr>
+<td align="center">K</td>
+<td>Kotlin</td>
+</tr>
+
+<tr>
+<td align="center">L</td>
+<td>Lighttpd configuration file, LLVM, Lua</td>
+</tr>
+
+<tr>
+<td align="center">M</td>
+<td>Mako, markdown, Mason, Mathematica, Matlab, MiniZinc, Modula-2, MonkeyC, MorrowindScript, Myghty, MySQL</td>
+</tr>
+
+<tr>
+<td align="center">N</td>
+<td>NASM, Newspeak, Nginx configuration file, Nim, Nix</td>
+</tr>
+
+<tr>
+<td align="center">O</td>
+<td>Objective-C, OCaml, Octave, OpenSCAD, Org Mode</td>
+</tr>
+
+<tr>
+<td align="center">P</td>
+<td>PacmanConf, Perl, PHP, Pig, PkgConfig, PL/pgSQL, plaintext, PostgreSQL SQL dialect, PostScript, POVRay, PowerShell, Prolog, Protocol Buffer, Puppet, Python, Python 3</td>
+</tr>
+
+<tr>
+<td align="center">Q</td>
+<td>QBasic</td>
+</tr>
+
+<tr>
+<td align="center">R</td>
+<td>R, Racket, Ragel, react, reg, reStructuredText, Rexx, Ruby, Rust</td>
+</tr>
+
+<tr>
+<td align="center">S</td>
+<td>Sass, Scala, Scheme, Scilab, SCSS, Smalltalk, Smarty, SML, Snobol, Solidity, SPARQL, SQL, SquidConf, Swift, SYSTEMD, systemverilog</td>
+</tr>
+
+<tr>
+<td align="center">T</td>
+<td>TASM, Tcl, Tcsh, Termcap, Terminfo, Terraform, TeX, Thrift, TOML, TradingView, Transact-SQL, Turing, Turtle, Twig, TypeScript, TypoScript, TypoScriptCssData, TypoScriptHtmlData</td>
+</tr>
+
+<tr>
+<td align="center">V</td>
+<td>VB.net, verilog, VHDL, VimL, vue</td>
+</tr>
+
+<tr>
+<td align="center">W</td>
+<td>WDTE</td>
+</tr>
+
+<tr>
+<td align="center">X</td>
+<td>XML, Xorg</td>
+</tr>
+
+<tr>
+<td align="center">Y</td>
+<td>YAML</td>
+</tr>
+</tbody>
+</table>
+
+<p>Hugo附帶了一組預定義的短代碼(shortcodes)，這些短代碼是為了方便作者在保持撰寫文件的簡易方便以外並保持Markdown內容乾淨。
+以下是利用Hugo的<code>highlight</code>短代碼來對程式碼區塊進行高亮(highlighter)的標示並指定是<code>html</code>的程式碼。</p>
+
+<p><img src="/images/20191225_md_syntax/highlight.png" alt="Hugo code higlighter" /></p>
+
+<p>結果展現:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Example HTML5 Document&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;Test&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+
+<p>如果想要呈現不同的程式碼的話，請參考<a href="https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages">List of Chroma Highlighting Languages</a>裡的程式名來進行修改替換。</p>
+
+<hr />
+
+<h2 id="其它-abbr-sub-sup-kbd-etc">其它 — abbr, sub, sup, kbd, etc.</h2>
+
+<p>除了標準的markdown語法之外，Hugo還支持一些讓文件更加地易於閱讀的語法標註。有興趣的朋友可以適當地使用。</p>
+
+<pre><code class="language-markdown">&lt;abbr title=&quot;Graphics Interchange Format&quot;&gt;GIF&lt;/abbr&gt; is a bitmap image format.
+
+H&lt;sub&gt;2&lt;/sub&gt;O
+
+C&lt;sub&gt;6&lt;/sub&gt;H&lt;sub&gt;12&lt;/sub&gt;O&lt;sub&gt;6&lt;/sub&gt;
+
+X&lt;sup&gt;n&lt;/sup&gt; + Y&lt;sup&gt;n&lt;/sup&gt; = Z&lt;sup&gt;n&lt;/sup&gt;
+
+Press &lt;kbd&gt;X&lt;/kbd&gt; to win. Or press &lt;kbd&gt;&lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;ALT&lt;/kbd&gt;+&lt;kbd&gt;F&lt;/kbd&gt;&lt;/kbd&gt; to show FPS counter.
+
+&lt;mark&gt;As a unit of information in information theory, the bit has alternatively been called a shannon&lt;/mark&gt;, named after Claude Shannon, the founder of field of information theory.
+
+</code></pre>
+
+<p>結果展現:</p>
+
+<p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
+
+<p>H<sub>2</sub>O</p>
+
+<p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></p>
+
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+
+<p>Press <kbd>X</kbd> to win. Or press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>F</kbd></kbd> to show FPS counter.</p>
+
+<p><mark>As a unit of information in information theory, the bit has alternatively been called a shannon</mark>, named after Claude Shannon, the founder of field of information theory.</p>
+
+<h3 id="參考資料">參考資料</h3>
+
+<ul>
+<li><a href="https://markdown.tw">https://markdown.tw</a></li>
+</ul>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/markdown/" rel="tag">Markdown</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="二哥 (Erhwen Kuo) avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 二哥 (Erhwen Kuo)</span>
+	</div>
+	<div class="authorbox__description">
+		緯創資通(Wistron)員工。在緯創創立「緯創IT先進技術實驗室(witlab)」、並於緯創協助導入Elasticsearch、MQTT、Apache Spark、Apache Flink、Apache Kafka、Keras與Tensorflow..等等在生產流程的應用及整合。
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/20191224_hugo_tutorial/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">使用Hugo與Github來建立部落格</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "erhwenkuo-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://erhwenkuo.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/20191225_md_syntax/">Markdown 語法說明</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/20191224_hugo_tutorial/">使用Hugo與Github來建立部落格</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/documentation/">Documentation</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 緯創IT先進技術實驗室.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
