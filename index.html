@@ -60,6 +60,34 @@
 	<article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/posts/20191225_hugo_disqus/" rel="bookmark">
+			Hugo整合Disqus留言管理
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-12-25T07:31:00">December 25, 2019</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/documentation/" rel="category">Documentation</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p><img src="/images/20191225_hugo_disqus/disqus_logo.png" alt="Disqus" /></p>
+
+<p>Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言。</p>
+
+<p>想要留言的訪客可以透過Disqus會員、Facebook帳號、Twitter帳號等方式來進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去。一個部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享。當我們透過Hugo這樣的一個靜態網站產生器來創建部落格的時候，自然就無法再透過自己的後台來提供留言板的功能。</p>
+
+<p>還好許多3rd party的留言板服務可以幫忙讓靜態網站也可以擁有這樣的功能。因此本篇就是要說明如何在將 Disqus留言板加入透過Hugo所創建的部落格。</p>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/posts/20191225_md_syntax/" rel="bookmark">
 			Markdown 語法說明
 			</a>
@@ -127,6 +155,7 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/20191225_hugo_disqus/">Hugo整合Disqus留言管理</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/20191225_md_syntax/">Markdown 語法說明</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/20191224_hugo_tutorial/">使用Hugo與Github來建立部落格</a></li>
 		</ul>
@@ -145,6 +174,7 @@
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/disqus/" title="Disqus">Disqus</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown</a>
 	</div>

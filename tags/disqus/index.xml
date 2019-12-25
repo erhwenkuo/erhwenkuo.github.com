@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Disqus on 緯創IT先進技術實驗室</title>
+    <link>https://erhwenkuo.github.io/tags/disqus/</link>
+    <description>Recent content in Disqus on 緯創IT先進技術實驗室</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2019 07:31:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://erhwenkuo.github.io/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo整合Disqus留言管理</title>
+      <link>https://erhwenkuo.github.io/posts/20191225_hugo_disqus/</link>
+      <pubDate>Wed, 25 Dec 2019 07:31:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/posts/20191225_hugo_disqus/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://erhwenkuo.github.io/images/20191225_hugo_disqus/disqus_logo.png&#34; alt=&#34;Disqus&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言。&lt;/p&gt;
+
+&lt;p&gt;想要留言的訪客可以透過Disqus會員、Facebook帳號、Twitter帳號等方式來進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去。一個部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享。當我們透過Hugo這樣的一個靜態網站產生器來創建部落格的時候，自然就無法再透過自己的後台來提供留言板的功能。&lt;/p&gt;
+
+&lt;p&gt;還好許多3rd party的留言板服務可以幫忙讓靜態網站也可以擁有這樣的功能。因此本篇就是要說明如何在將 Disqus留言板加入透過Hugo所創建的部落格。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
