@@ -6,10 +6,25 @@
     <description>Recent content in Documentation on 緯創IT先進技術實驗室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Dec 2019 19:54:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2019 09:31:00 +0800</lastBuildDate>
     
 	<atom:link href="https://erhwenkuo.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo整合Mermaid的markdown流程圖</title>
+      <link>https://erhwenkuo.github.io/posts/20191228_hugo_mermaid/</link>
+      <pubDate>Sat, 28 Dec 2019 09:31:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/posts/20191228_hugo_mermaid/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://erhwenkuo.github.io/images/20191228_hugo_mermaid/mermaid.png&#34; alt=&#34;Markdown&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;寫文件的時候難免要有圖有表, 俗話說&amp;rdquo;有圖有真像&amp;rdquo;、&amp;rdquo;一表勝千文&amp;rdquo;。&lt;/p&gt;
+
+&lt;p&gt;有時候寫使用者需求、SA/SD文件、功能說明、使用者說明或是要記錄bug分析結果，適當地使用圖表則更容易讓人理解與直觀。&lt;/p&gt;
+
+&lt;p&gt;我們則是希望慢慢地將傳統寫文件的工具(word, powerpoint..)、檔案格式(doc, xlsx, ppt, pdf..)、文件的版本控制、文件的儲存與發佈都能夠與時俱進地跟上潮流。 因此如何在Markdown文件中來支援一些常用的流程圖就變成相當重要的關鍵了。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo整合Disqus留言管理</title>

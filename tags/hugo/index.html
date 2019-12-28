@@ -12,7 +12,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://erhwenkuo.github.io/tags/hugo/" />
 
-<meta property="og:updated_time" content="2019-12-26T19:54:00+08:00" />
+<meta property="og:updated_time" content="2019-12-28T09:31:00+08:00" />
 
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -59,6 +59,34 @@
 	<header class="main__header">
 		<h1 class="main__title">Hugo</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/20191228_hugo_mermaid/" rel="bookmark">
+			Hugo整合Mermaid的markdown流程圖
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-12-28T09:31:00">December 28, 2019</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/documentation/" rel="category">Documentation</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p><img src="/images/20191228_hugo_mermaid/mermaid.png" alt="Markdown" /></p>
+
+<p>寫文件的時候難免要有圖有表, 俗話說&rdquo;有圖有真像&rdquo;、&rdquo;一表勝千文&rdquo;。</p>
+
+<p>有時候寫使用者需求、SA/SD文件、功能說明、使用者說明或是要記錄bug分析結果，適當地使用圖表則更容易讓人理解與直觀。</p>
+
+<p>我們則是希望慢慢地將傳統寫文件的工具(word, powerpoint..)、檔案格式(doc, xlsx, ppt, pdf..)、文件的版本控制、文件的儲存與發佈都能夠與時俱進地跟上潮流。 因此如何在Markdown文件中來支援一些常用的流程圖就變成相當重要的關鍵了。</p>
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/posts/20191225_hugo_disqus/" rel="bookmark">
@@ -157,6 +185,7 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/20191228_hugo_mermaid/">Hugo整合Mermaid的markdown流程圖</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/20191225_hugo_disqus/">Hugo整合Disqus留言管理</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/20191225_md_syntax/">Markdown 語法說明</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/20191224_hugo_tutorial/">使用Hugo與Github來建立部落格</a></li>
@@ -179,11 +208,15 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/disqus/" title="Disqus">Disqus</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mermaid.js/" title="Mermaid.js">Mermaid.js</a>
 	</div>
 </div>
 </aside>
 		</div>
-		<footer class="footer">
+		
+<script src="https://cdn.bootcss.com/mermaid/8.4.4/mermaid.min.js"></script>
+
+<footer class="footer">
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
@@ -192,6 +225,8 @@
 		</div>
 	</div>
 </footer>
+
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 </body>
