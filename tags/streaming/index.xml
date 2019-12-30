@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streaming on 緯創IT先進技術實驗室</title>
+    <link>https://erhwenkuo.github.io/tags/streaming/</link>
+    <description>Recent content in Streaming on 緯創IT先進技術實驗室</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Dec 2019 20:31:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://erhwenkuo.github.io/tags/streaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Apache Pulsar在騰訊計費場景下的應用</title>
+      <link>https://erhwenkuo.github.io/posts/20191230_pulsar_tencent/</link>
+      <pubDate>Mon, 30 Dec 2019 20:31:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/posts/20191230_pulsar_tencent/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://erhwenkuo.github.io/images/20191230_pulsar_tencent/pulsar_tencent.png&#34; alt=&#34;騰訊計費場景下的應用&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最近在聽&lt;a href=&#34;https://flink.apache.org/&#34;&gt;Apache Flink&lt;/a&gt;的Europe的conference時聽到一個很有趣的串流運算的案例，一般來說串流運算基本紅配綠原則就是Apache Spark/Flink配Kafka，但是這個案例卻是Apache Flink配&lt;a href=&#34;https://pulsar.apache.org/&#34;&gt;Apache Pulsar&lt;/a&gt;，而且還是對岸的當紅炸子雞-&amp;ldquo;騰訊&amp;rdquo;。啥 ~ &amp;ldquo;Pular&amp;rdquo; ?! 是地，你沒看錯，除了大家耳熟能詳的Kafka之外，居然有一個新小伙子衝了出來。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

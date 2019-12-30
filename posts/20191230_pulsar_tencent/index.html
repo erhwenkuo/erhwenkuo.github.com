@@ -4,15 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hugo整合Disqus留言管理 - 緯創IT先進技術實驗室</title>
+	<title>Apache Pulsar在騰訊計費場景下的應用 - 緯創IT先進技術實驗室</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Markdown的語法全由標點符號所組成，目標是實現「易讀易寫」。">
-	<meta property="og:title" content="Hugo整合Disqus留言管理" />
-<meta property="og:description" content="Markdown的語法全由標點符號所組成，目標是實現「易讀易寫」。" />
+	<meta name="description" content="Apache Pulsar在騰訊計費場景下的應用">
+	<meta property="og:title" content="Apache Pulsar在騰訊計費場景下的應用" />
+<meta property="og:description" content="Apache Pulsar在騰訊計費場景下的應用" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://erhwenkuo.github.io/posts/20191225_hugo_disqus/" />
-<meta property="article:published_time" content="2019-12-26T19:54:00+08:00" />
-<meta property="article:modified_time" content="2019-12-26T19:54:00+08:00" />
+<meta property="og:url" content="https://erhwenkuo.github.io/posts/20191230_pulsar_tencent/" />
+<meta property="article:published_time" content="2019-12-30T20:31:00+08:00" />
+<meta property="article:modified_time" content="2019-12-30T20:31:00+08:00" />
 
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -57,69 +57,80 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Hugo整合Disqus留言管理</h1>
+			<h1 class="post__title">Apache Pulsar在騰訊計費場景下的應用</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-12-26T19:54:00">December 26, 2019</time>
+	<time class="meta__text" datetime="2019-12-30T20:31:00">December 30, 2019</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/documentation/" rel="category">Documentation</a>
+	<span class="meta__text"><a class="meta__link" href="/categories/streaming/" rel="category">Streaming</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p><img src="/images/20191225_hugo_disqus/disqus_logo.png" alt="Disqus" /></p>
+			<p><img src="/images/20191230_pulsar_tencent/pulsar_tencent.png" alt="騰訊計費場景下的應用" /></p>
 
-<p>Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言。</p>
+<p>最近在聽<a href="https://flink.apache.org/">Apache Flink</a>的Europe的conference時聽到一個很有趣的串流運算的案例，一般來說串流運算基本紅配綠原則就是Apache Spark/Flink配Kafka，但是這個案例卻是Apache Flink配<a href="https://pulsar.apache.org/">Apache Pulsar</a>，而且還是對岸的當紅炸子雞-&ldquo;騰訊&rdquo;。啥 ~ &ldquo;Pular&rdquo; ?! 是地，你沒看錯，除了大家耳熟能詳的Kafka之外，居然有一個新小伙子衝了出來。</p>
 
-<p>想要留言的訪客可以透過Disqus會員、Facebook帳號、Twitter帳號等方式來進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去。一個部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享。當我們透過Hugo這樣的一個靜態網站產生器來創建部落格的時候，自然就無法再透過自己的後台來提供留言板的功能。</p>
+<p>騰訊計費（米大師）是支撐騰訊內部業務千億級營收的互聯網計費平臺，它提供賬戶管理、精準營銷、安全風控、稽覈分賬、計費分析等多維度服務。在金流資訊流如此龐大的計費場景下，要解決的核心技術問題就是如何確保錢貨一致。</p>
 
-<p>還好許多3rd party的留言板服務可以幫忙讓靜態網站也可以擁有這樣的功能。因此本篇就是要說明如何在將 Disqus留言板加入透過Hugo所創建的部落格。</p>
+<p><img src="/images/20191230_pulsar_tencent/tencent_architecture.png" alt="騰訊計費" /></p>
 
-<hr />
+<p>騰訊自己研發了分佈式交易引擎TDXA來解決交易過程中應用層邏輯一致性問題，架構如下圖:</p>
 
-<h2 id="註冊disqus帳號">註冊Disqus帳號</h2>
+<p><img src="/images/20191230_pulsar_tencent/tencent_tdxa.png" alt="騰訊TDXAte" /></p>
 
-<p>1.先打開<a href="https://disqus.com/">Diqus</a>的網頁</p>
+<ul>
+<li>TM：分佈式事務管理器。作爲 TDXA 的控制大腦，採用去中心化模式，提供高可用服務，支持純接口調用的 TCC 以及 DB 混合事務。在執行效率方面藉助協程異步框架 TDF 以及 TDSQL 異步事務（Prepare 後可以關閉鏈接）能力支撐全公司的計費業務。</li>
+<li>CM：作爲 TDXA 的配置中心，引入可靈活註冊的跳轉控制機制，即時構建事務流程有向圖，可以自動對流程的正確性和完備性進行檢查，並以圖形界面展示給用戶，在圖形界面進行管理。</li>
+<li>TDSQL：自研金融級分佈式數據庫，具備強一致高可用、全球部署架構、分佈式水平擴展、高性能、企業級安全等特性，爲用戶提供完整的分佈式數據庫解決方案。</li>
+<li>MQ：爲 TDXA 提供高一致、高可用的消息通道能力，結合事物狀態表最終對各種異常進行收斂。</li>
+</ul>
 
-<p><img src="/images/20191225_hugo_disqus/diqus_register.png" alt="註冊Disqus" /></p>
+<h2 id="mq-在計費場景的應用">MQ 在計費場景的應用</h2>
 
-<p>2.註冊一個新帳號，我是使用Google的帳號來進行註冊的</p>
+<p>圍繞計費高一致目標，MQ（message queue）在騰訊計費中的應用可以分爲在線服務和離線準實時服務。</p>
 
-<p><img src="/images/20191225_hugo_disqus/diqus_signup.png" alt="取得帳號Disqus" /></p>
+<h3 id="在線服務場景">在線服務場景</h3>
 
-<p>3.留言版啟動設定</p>
+<p>失敗和超時，騰訊計費覆蓋 80+ 特點各異的渠道，300+ 不同業務邏輯，單個支付邏輯常橫跨衆多不同的內外部系統，調用鏈路比較長，異常出現的機率相對也會比較大，特別是網路超時（比如海外支付業務）。</p>
 
-<p>點選&rdquo;I want to install Disqus on my site&rdquo;</p>
+<p>TDXA 在處理這類情況會配合本地事務狀態庫，通過消息隊列、消息到期重發，從斷點開始繼續執行整個交易事務，保證每日億級交易請求的一致性。</p>
 
-<p><img src="/images/20191225_hugo_disqus/diqus_setup.png" alt="Disqus留言版啟動設定" /></p>
+<h3 id="離線準實時服務場景">離線準實時服務場景</h3>
 
-<p>設定&rdquo;Website Name&rdquo;、&rdquo;Category&rdquo;
-<img src="/images/20191225_hugo_disqus/disqus_sitesetup.png" alt="Disqus留言版啟動設定2" /></p>
+<p>怎麼證明計費系統的高一致呢？那就必須通過第三方對賬系統來驗證，對賬時間粒度越小，就能越早發現問題。在互聯網移動支付行業，用戶體驗是第一位，倘若在玩王者榮耀時，購買英雄後沒有及時發貨，勢必會影響用戶體驗，甚至遭到投訴。</p>
 
-<p>特別注意&rdquo;Shortname&rdquo;的值，以本範例來說: Shortname = <strong>erhwenkuo-github-io</strong></p>
+<p>藉助 MQ 實時管理能力以及流式計算框架對計費流水進行實時對賬和監控，與 TDXA 相輔相成，共同保證整個交易的時效性和一致性。</p>
 
-<p>4.編輯config.toml檔案來啟動留言版</p>
+<p><img src="/images/20191230_pulsar_tencent/tencent_online_offline.png" alt="騰訊online_offline" /></p>
 
-<p>Hugo原本就有對disqus的支持，所以只要在設定檔中把disqus取得的<code>Shortname</code>值設定好，然後發佈到Github後就行了。</p>
+<h2 id="爲什麼選擇-pulsar">爲什麼選擇 Pulsar</h2>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://erhwenkuo.github.io/&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;緯創IT先進技術實驗室&#34;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;mainroad&#34;</span>
-<span style="display:block;width:100%;background-color:#3c3d38"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span style="color:#a6e22e">disqusShortname</span> = <span style="color:#e6db74">&#34;erhwenkuo-github-io&#34;</span></span></code></pre></div>
+<p>騰訊計費系統對分佈式消息隊列的要求如下：</p>
 
-<h2 id="最後的效果">最後的效果</h2>
+<ul>
+<li>一致性要求: 計費場景要求數據一條不能丟，這是最基本的訴求。</li>
+<li>高可用要求: 需具備容災能力，在異常情況下能夠自動修復。</li>
+<li>海量存儲需求: 在移動互聯網時代，產生大量的交易數據，需要具備海量堆積能力。</li>
+<li>快速響應要求: 在億級支付場景下，要求MQ能提供平滑的響應時間，儘可能控制在10ms內。</li>
+</ul>
 
-<p><img src="/images/20191225_hugo_disqus/disqus_comments.png" alt="Disqus" /></p>
+<p>騰訊選Pulsar是因爲其原生的高一致性，基於<a href="https://bookkeeper.apache.org/">Apache BookKeeper</a>提供高可用存儲服務，採用了<code>存儲</code>和<code>服務</code>分離架構方便擴容，同時還支持多種消費模式和多域部署模式。</p>
+
+<h2 id="pulsar-在騰訊計費的使用情況">Pulsar 在騰訊計費的使用情況</h2>
+
+<p>&ldquo;分佈式消息佇列&rdquo;目前基本上覆蓋了大部分計費系統，很多已經成爲了支付環節的關鍵重點。Pulsar提供穩定的高一致、高可用的消息通道能力，讓計費交易引擎穩定高效運轉。目前，Pulsar已在&rdquo;騰訊計費&rdquo;大規模使用，經受住了業務高峯的壓力和交易一致性的考驗，達到了5個9的高可用率。</p>
+
+<p><img src="/images/20191230_pulsar_tencent/pulsar_tencent_usage.png" alt="騰訊usage" /></p>
 
 <h3 id="參考資料">參考資料</h3>
 
 <ul>
-<li><a href="https://coolgood88142.github.io/zh-tw/posts/hugo/">https://coolgood88142.github.io/zh-tw/posts/hugo/</a></li>
-<li><a href="https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/">https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/</a></li>
+<li>原文出處: <a href="https://streamnative.io/success-stories/tencent/">https://streamnative.io/success-stories/tencent/</a></li>
+<li>中文出處: <a href="https://www.twblogs.net/a/5d5236afbd9eee5327fcb2fc">https://www.twblogs.net/a/5d5236afbd9eee5327fcb2fc</a></li>
 </ul>
 		</div>
 		<footer class="post__footer">
@@ -127,8 +138,8 @@
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/disqus/" rel="tag">Disqus</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/pulsar/" rel="tag">Pulsar</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/streaming/" rel="tag">Streaming</a></li>
 	</ul>
 </div>
 		</footer>
@@ -149,10 +160,7 @@
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/posts/20191225_md_syntax/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Markdown 語法說明</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/posts/20191228_hugo_mermaid/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Hugo整合Mermaid的markdown流程圖</p></a>
+		<a class="post-nav__link" href="/posts/20191228_hugo_mermaid/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Hugo整合Mermaid的markdown流程圖</p></a>
 	</div>
 </nav>
 

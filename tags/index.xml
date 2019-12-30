@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 緯創IT先進技術實驗室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2019 09:31:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 20:31:00 +0800</lastBuildDate>
     
 	<atom:link href="https://erhwenkuo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pulsar</title>
+      <link>https://erhwenkuo.github.io/tags/pulsar/</link>
+      <pubDate>Mon, 30 Dec 2019 20:31:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/tags/pulsar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Streaming</title>
+      <link>https://erhwenkuo.github.io/tags/streaming/</link>
+      <pubDate>Mon, 30 Dec 2019 20:31:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/tags/streaming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>
