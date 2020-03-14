@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 緯創IT先進技術實驗室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Dec 2019 20:31:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 09:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://erhwenkuo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bigtop</title>
+      <link>https://erhwenkuo.github.io/tags/bigtop/</link>
+      <pubDate>Sat, 14 Mar 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/tags/bigtop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloudera</title>
+      <link>https://erhwenkuo.github.io/tags/cloudera/</link>
+      <pubDate>Sat, 14 Mar 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/tags/cloudera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hortonworks</title>
+      <link>https://erhwenkuo.github.io/tags/hortonworks/</link>
+      <pubDate>Sat, 14 Mar 2020 09:00:00 +0800</pubDate>
+      
+      <guid>https://erhwenkuo.github.io/tags/hortonworks/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Pulsar</title>

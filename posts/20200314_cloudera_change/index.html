@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cloudera 停止提供免費社群版本 - 緯創IT先進技術實驗室</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Cloudera 停止提供免費社群版本">
+	<meta property="og:title" content="Cloudera 停止提供免費社群版本" />
+<meta property="og:description" content="Cloudera 停止提供免費社群版本" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://erhwenkuo.github.io/posts/20200314_cloudera_change/" />
+<meta property="article:published_time" content="2020-03-14T09:00:00+08:00" />
+<meta property="article:modified_time" content="2020-03-14T09:00:00+08:00" />
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="緯創IT先進技術實驗室" rel="home">
+				<div class="logo__title">緯創IT先進技術實驗室</div>
+				<div class="logo__tagline">二哥 (Erhwen Kuo)</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Cloudera 停止提供免費社群版本</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-14T09:00:00">March 14, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/big-data/" rel="category">Big data</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			
+
+<p><img src="https://img.itw01.com/images/2019/07/22/17/5625_cXpCIg_URWXBEQ.png!r800x0.jpg" alt="Cloudera合併Hortonworks" /></p>
+
+<p>最近的專案會整合<a href="https://atlas.apache.org/">Apache Atlas</a>與<a href="https://ranger.apache.org/">Apache Ranger</a>這兩個專門來幫助做資料湖(Datalake)的元資料治理、資料履歷、資料旅程、資料授權、資料使用審計及相關的管理功能。選擇這兩個元件的主要原因還是因為在大數據的領域中許多的重要元件都涵括在Apache的生態圈裡, 比如:</p>
+
+<ul>
+<li>File Storage: HDFS</li>
+<li>DB Storage: Hive, HBase, Cassandra, Kudu, Phoenix</li>
+<li>Process Engine: Spark, Impala</li>
+<li>OLAP Engine: Kylin</li>
+<li>ETL Tool: NiFi, Airflow, Sqoop</li>
+</ul>
+
+<p>然而就在研究過程中發現Cloudera在合併Hortonworks之後, 修改了他們對社群版本發佈的策略與方向。而這件事對想要使用相關由Cloudera及Hortonworks所發佈的集成版的朋友們, 可能會有後續要去思考的事宜了。</p>
+
+<p>Cloudera最近宣布了一些license與版本發佈的更改。博客文章的標題是“<a href="https://blog.cloudera.com/our-commitment-to-open-source-software/">我們對開源軟件的承諾</a>”，我想可能不會有很多人看完之後會非常明確地了解這些更改的意思。簡單來說, 就是<strong>Cloudera不會再提供己經編譯好的軟件包給沒有買subscription的用戶</strong>。</p>
+
+<p>這個的動作對一個以營利為目的的軟體服務公司來說,並不令人意外。但卻也意味著許多大公闆對Open source就是&rdquo;免費&rdquo;的錯誤認知需要被重新導引了。Cloudera的主流版本是CDP (<a href="https://www.cloudera.com/products/cloudera-data-platform.html">Cloudear Data Platform</a>)。
+下列是官方版本的報價:</p>
+
+<table>
+<thead>
+<tr>
+<th>Cloudera Platforms (年度 subscription)</th>
+<th>CDP Data Center</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Base price (單一節點)</td>
+<td>$10,000 (美金)</td>
+</tr>
+
+<tr>
+<td>Variable price - 計算CCU</td>
+<td>$75 (美金)</td>
+</tr>
+
+<tr>
+<td>Variable price - 儲存1TB</td>
+<td>$25 (美金)</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>單一節點: 16 physical cores, 128GB RAM, and 48TB storage per server</p>
+
+<p>如果節點的計算硬體超過上限, 還要額外以CCU (1 physical CPU core and 8 GB of RAM) 作為單位來加價</p>
+
+<p>如果節點的儲存空間超過上限, 還要額外以每TB作為單位來加價</p>
+</blockquote>
+
+<p>因此對於社群來說,想要安裝而且可以合法取得社群版的Cloudera或Hortonworks的版本資訊如下:</p>
+
+<h3 id="cloudera-cdh-6-3-2-https-docs-cloudera-com-documentation-enterprise-6-release-notes-topics-rg-cdh-62-download-html">Cloudera: <a href="https://docs.cloudera.com/documentation/enterprise/6/release-notes/topics/rg_cdh_62_download.html">CDH 6.3.2</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Component Version</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Apache Avro</td>
+<td>1.8.2</td>
+</tr>
+
+<tr>
+<td>Apache Flume</td>
+<td>1.9.0</td>
+</tr>
+
+<tr>
+<td>Apache Hadoop</td>
+<td>3.0.0</td>
+</tr>
+
+<tr>
+<td>Apache HBase</td>
+<td>2.1.4</td>
+</tr>
+
+<tr>
+<td>HBase Indexer</td>
+<td>1.5</td>
+</tr>
+
+<tr>
+<td>Apache Hive</td>
+<td>2.1.1</td>
+</tr>
+
+<tr>
+<td>Hue</td>
+<td>4.3.0</td>
+</tr>
+
+<tr>
+<td>Apache Impala</td>
+<td>3.2.0</td>
+</tr>
+
+<tr>
+<td>Apache Kafka</td>
+<td>2.2.1</td>
+</tr>
+
+<tr>
+<td>Kite SDK</td>
+<td>1.0.0</td>
+</tr>
+
+<tr>
+<td>Apache Kudu</td>
+<td>1.10.0</td>
+</tr>
+
+<tr>
+<td>Apache Solr</td>
+<td>7.4.0</td>
+</tr>
+
+<tr>
+<td>Apache Oozie</td>
+<td>5.1.0</td>
+</tr>
+
+<tr>
+<td>Apache Parquet</td>
+<td>1.9.0</td>
+</tr>
+
+<tr>
+<td>Parquet-format</td>
+<td>2.4.0</td>
+</tr>
+
+<tr>
+<td>Apache Pig</td>
+<td>0.17.0</td>
+</tr>
+
+<tr>
+<td>Apache Sentry</td>
+<td>2.1.0</td>
+</tr>
+
+<tr>
+<td>Apache Spark</td>
+<td>2.4.0</td>
+</tr>
+
+<tr>
+<td>Apache Sqoop</td>
+<td>1.4.7</td>
+</tr>
+
+<tr>
+<td>Apache ZooKeeper</td>
+<td>3.4.5</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="hortonworks-hdp-3-1-4-https-docs-cloudera-com-hdpdocuments-hdp3-hdp-3-1-4-release-notes-content-comp-versions-html">Hortonworks: <a href="https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.4/release-notes/content/comp_versions.html">HDP 3.1.4</a></h3>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Component Version</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Apache Accumulo</td>
+<td>1.7.0</td>
+</tr>
+
+<tr>
+<td>Apache Atlas</td>
+<td>1.1.0</td>
+</tr>
+
+<tr>
+<td>Apache Calcite</td>
+<td>1.16.0</td>
+</tr>
+
+<tr>
+<td>Apache DataFu</td>
+<td>1.3.0</td>
+</tr>
+
+<tr>
+<td>Apache Druid</td>
+<td>0.12.1 (incubating)</td>
+</tr>
+
+<tr>
+<td>Apache Hadoop</td>
+<td>3.1.1</td>
+</tr>
+
+<tr>
+<td>Apache HBase</td>
+<td>2.0.2</td>
+</tr>
+
+<tr>
+<td>Apache Hive</td>
+<td>3.1.0</td>
+</tr>
+
+<tr>
+<td>Apache Kafka</td>
+<td>2.0.0</td>
+</tr>
+
+<tr>
+<td>Apache Knox</td>
+<td>1.0.0</td>
+</tr>
+
+<tr>
+<td>Apache Livy</td>
+<td>0.5.0</td>
+</tr>
+
+<tr>
+<td>Apache Oozie</td>
+<td>4.3.1</td>
+</tr>
+
+<tr>
+<td>Apache Phoenix</td>
+<td>5.0.0</td>
+</tr>
+
+<tr>
+<td>Apache Pig</td>
+<td>0.16.0</td>
+</tr>
+
+<tr>
+<td>Apache Ranger</td>
+<td>1.2.0</td>
+</tr>
+
+<tr>
+<td>Apache Spark</td>
+<td>2.3.2</td>
+</tr>
+
+<tr>
+<td>Apache Sqoop</td>
+<td>1.4.7</td>
+</tr>
+
+<tr>
+<td>Apache Storm</td>
+<td>1.2.1</td>
+</tr>
+
+<tr>
+<td>Apache TEZ</td>
+<td>0.9.1</td>
+</tr>
+
+<tr>
+<td>Apache Zeppelin</td>
+<td>0.8.0</td>
+</tr>
+
+<tr>
+<td>Apache ZooKeeper</td>
+<td>3.4.6</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="apache-bigtop-version-1-4-0-https-bigtop-apache-org-release-notes-html">Apache Bigtop: <a href="https://bigtop.apache.org/release-notes.html">Version 1.4.0</a></h3>
+
+<p><img src="https://bigtop.apache.org/images/bigtop-logo.png" alt="Apache Bigtop" /></p>
+
+<p>當然開源專案的好處就是,我們總是可以找到一個出路。在這裡也想要推薦一個在過去十幾年來持續在改進Apache的生態圈相關元件的集成、構建與佈署的專案(而且PMC的member之一就是&rdquo;葉祐欣&rdquo;大大): <a href="https://bigtop.apache.org/">Apache Bigtop</a>!</p>
+
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Component Version</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Apache Ambari</td>
+<td>2.6.1</td>
+</tr>
+
+<tr>
+<td>GreenPlum DB</td>
+<td>5.10.0</td>
+</tr>
+
+<tr>
+<td>Quantcast Filesystem</td>
+<td>2.0.0</td>
+</tr>
+
+<tr>
+<td>Apache Apex</td>
+<td>3.6.0</td>
+</tr>
+
+<tr>
+<td>Apache Tajo</td>
+<td>0.11.1</td>
+</tr>
+
+<tr>
+<td>Apache Zeppelin</td>
+<td>0.7.3</td>
+</tr>
+
+<tr>
+<td>Apache Hama</td>
+<td>0.7.1</td>
+</tr>
+
+<tr>
+<td>Apache Kafka</td>
+<td>0.10.2.2</td>
+</tr>
+
+<tr>
+<td>Alluxio</td>
+<td>1.8.1</td>
+</tr>
+
+<tr>
+<td>Apache Flink</td>
+<td>1.6.4</td>
+</tr>
+
+<tr>
+<td>Apache Spark</td>
+<td>2.2.3</td>
+</tr>
+
+<tr>
+<td>Apache Solr</td>
+<td>6.6.0</td>
+</tr>
+
+<tr>
+<td>Apache Giraph</td>
+<td>1.1.0</td>
+</tr>
+
+<tr>
+<td>Apache Flueme</td>
+<td>1.8.0</td>
+</tr>
+
+<tr>
+<td>Apache Mahout</td>
+<td>0.13.0</td>
+</tr>
+
+<tr>
+<td>Apache Oozie</td>
+<td>4.3.0</td>
+</tr>
+
+<tr>
+<td>Apache Sqoop2</td>
+<td>1.99.4</td>
+</tr>
+
+<tr>
+<td>Apache Sqoop</td>
+<td>1.4.6</td>
+</tr>
+
+<tr>
+<td>Apache Tez</td>
+<td>0.9.1</td>
+</tr>
+
+<tr>
+<td>Apache Hive</td>
+<td>2.3.3</td>
+</tr>
+
+<tr>
+<td>Apache Phoenix</td>
+<td>4.13.1</td>
+</tr>
+
+<tr>
+<td>Apache HBase</td>
+<td>1.3.2</td>
+</tr>
+
+<tr>
+<td>Apache Ignite</td>
+<td>1.9.0</td>
+</tr>
+
+<tr>
+<td>Apache Hadoop</td>
+<td>2.8.5</td>
+</tr>
+
+<tr>
+<td>Apache Zookeeper</td>
+<td>3.4.6</td>
+</tr>
+</tbody>
+</table>
+
+<p>我想如果可以把Ambari結合HDP的package的部份再稍為修改與延伸來整合到Bigtop的package。或許是下一個community版本的好出口, 不過也有可能是循著Redhat的開源版本Centos的做法。</p>
+
+<p>不過不管是那一種, 對於現在使用社群版的Cloudera: CDH或Hortonworks: HDP的公司, 都應該把這個議題放進資料平台規劃與架構的討論議題中囉!!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/cloudera/" rel="tag">Cloudera</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hortonworks/" rel="tag">Hortonworks</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/bigtop/" rel="tag">Bigtop</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="二哥 (Erhwen Kuo) avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 二哥 (Erhwen Kuo)</span>
+	</div>
+	<div class="authorbox__description">
+		緯創資通(Wistron)員工。在緯創創立「緯創IT先進技術實驗室(witlab)」、並於緯創協助導入Elasticsearch、MQTT、Apache Spark、Apache Flink、Apache Kafka、Keras與Tensorflow..等等在生產流程的應用及整合。
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/20191230_pulsar_tencent/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Apache Pulsar在騰訊計費場景下的應用</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "erhwenkuo-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://erhwenkuo.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/20200314_cloudera_change/">Cloudera 停止提供免費社群版本</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/20191230_pulsar_tencent/">Apache Pulsar在騰訊計費場景下的應用</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/20191228_hugo_mermaid/">Hugo整合Mermaid的markdown流程圖</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/20191225_hugo_disqus/">Hugo整合Disqus留言管理</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/20191225_md_syntax/">Markdown 語法說明</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/20191224_hugo_tutorial/">使用Hugo與Github來建立部落格</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/big-data/">Big data</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/documentation/">Documentation</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/streaming/">Streaming</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/bigtop/" title="Bigtop">Bigtop</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cloudera/" title="Cloudera">Cloudera</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/disqus/" title="Disqus">Disqus</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hortonworks/" title="Hortonworks">Hortonworks</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mermaid.js/" title="Mermaid.js">Mermaid.js</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pulsar/" title="Pulsar">Pulsar</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/streaming/" title="Streaming">Streaming</a>
+	</div>
+</div>
+</aside>
+		</div>
+		
+<script src="https://cdn.bootcss.com/mermaid/8.4.4/mermaid.min.js"></script>
+
+<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 緯創IT先進技術實驗室.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

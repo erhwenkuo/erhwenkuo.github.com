@@ -3,17 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://erhwenkuo.github.io/posts/20191230_pulsar_tencent/</loc>
-    <lastmod>2019-12-30T20:31:00+08:00</lastmod>
+    <loc>https://erhwenkuo.github.io/categories/big-data/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/tags/bigtop/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://erhwenkuo.github.io/categories/</loc>
-    <lastmod>2019-12-30T20:31:00+08:00</lastmod>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/tags/cloudera/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/posts/20200314_cloudera_change/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/tags/hortonworks/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://erhwenkuo.github.io/posts/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/tags/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/</loc>
+    <lastmod>2020-03-14T09:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://erhwenkuo.github.io/posts/20191230_pulsar_tencent/</loc>
     <lastmod>2019-12-30T20:31:00+08:00</lastmod>
   </url>
   
@@ -23,22 +58,12 @@
   </url>
   
   <url>
-    <loc>https://erhwenkuo.github.io/tags/streaming/</loc>
-    <lastmod>2019-12-30T20:31:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://erhwenkuo.github.io/categories/streaming/</loc>
     <lastmod>2019-12-30T20:31:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://erhwenkuo.github.io/tags/</loc>
-    <lastmod>2019-12-30T20:31:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://erhwenkuo.github.io/</loc>
+    <loc>https://erhwenkuo.github.io/tags/streaming/</loc>
     <lastmod>2019-12-30T20:31:00+08:00</lastmod>
   </url>
   
