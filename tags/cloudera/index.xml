@@ -20,7 +20,7 @@
       <description>最近的專案會整合Apache Atlas與Apache Ranger這兩個專門來幫助做資料湖(Datalake)的元資料治理、資料履歷、資料旅程、資料授權、資料使用審計及相關的管理功能。選擇這兩個元件的主要原因還是因為在大數據的領域中許多的重要元件都涵括在Apache的生態圈裡, 比如:
  File Storage: HDFS DB Storage: Hive, HBase, Cassandra, Kudu, Phoenix Process Engine: Spark, Impala OLAP Engine: Kylin ETL Tool: NiFi, Airflow, Sqoop  然而就在研究過程中發現Cloudera在合併Hortonworks之後, 修改了他們對社群版本發佈的策略與方向。而這件事對想要使用相關由Cloudera及Hortonworks所發佈的集成版的朋友們, 可能會有後續要去思考的事宜了。
 Cloudera最近宣布了一些license與版本發佈的更改。博客文章的標題是“我們對開源軟件的承諾”，我想可能不會有很多人看完之後會非常明確地了解這些更改的意思。簡單來說, 就是Cloudera不會再提供己經編譯好的軟件包給沒有買subscription的用戶。
-這個的動作對一個以營利為目的的軟體服務公司來說,並不令人意外。但卻也意味著許多大公闆對Open source就是&amp;rdquo;免費&amp;rdquo;的錯誤認知需要被重新導引了。Cloudera的主流版本是CDP (Cloudear Data Platform)。 下列是官方版本的報價:
+這個的動作對一個以營利為目的的軟體服務公司來說,並不令人意外。但卻也意味著許多大公闆對Open source就是&amp;rdquo;免費&amp;rdquo;的錯誤認知需要被重新導引了。Cloudera的主流版本是CDP (Cloudera Data Platform)。 下列是官方版本的報價:
    Cloudera Platforms (年度 subscription) CDP Data Center     Base price (單一節點) $10,000 (美金)   Variable price - 計算CCU $75 (美金)   Variable price - 儲存1TB $25 (美金)     單一節點: 16 physical cores, 128GB RAM, and 48TB storage per server</description>
     </item>
     
